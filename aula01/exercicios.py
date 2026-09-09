@@ -3,11 +3,19 @@
 NAO mude o nome deste arquivo nem a assinatura das funcoes.
 Escreva sua solucao no lugar do 'pass'.
 """
+def soma_lista (lista):
+    soma = 0
+    for n in lista:
+        soma = soma + n 
 
+        return soma
 
 def soma_lista(lista):
-    """Devolve a soma de todos os numeros da lista. Lista vazia devolve 0."""
-    pass
+    cont = 0
+    for n in lista:
+        if n%2 == 0:
+
+            return cont
 
 
 def conta_pares(lista):
