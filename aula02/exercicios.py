@@ -6,7 +6,17 @@ Escreva sua solucao no lugar do 'pass'.
 
 
 def remove_negativos(lista):
-   
+   def remove_negativos(lista):
+    resultado = []
+    for i in lista:
+        if i >= 0:
+            resultado.append(i)
+    return resultado
+
+
+minha_lista = [10, -5, 3, -1, 0, 7, -8]
+print(remove_negativos(minha_lista))
+
 
 def inverte(lista):
     """Devolve uma lista nova na ordem contraria.
