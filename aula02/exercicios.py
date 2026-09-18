@@ -6,9 +6,7 @@ Escreva sua solucao no lugar do 'pass'.
 
 
 def remove_negativos(lista):
-    """Devolve uma lista nova so com os numeros que nao sao negativos."""
-    pass
-
+   
 
 def inverte(lista):
     """Devolve uma lista nova na ordem contraria.
