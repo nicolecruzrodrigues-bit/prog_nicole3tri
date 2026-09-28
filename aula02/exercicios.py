@@ -19,14 +19,31 @@ print(remove_negativos(minha_lista))
 
 
 def inverte(lista):
-    """Devolve uma lista nova na ordem contraria.
-    Sem usar reverse() e sem usar [::-1]."""
-    pass
+    def inverter_lista(lista):
+    nova = []
+    tamanho = len(lista)
+    while tamanho > 0:
+        tamanho = tamanho - 1
+        nova.append(lista[tamanho])
+    return nova
+
+numeros = [1, 2, 3, 4, 5]
+resultado = inverter_lista(numeros)
+print(resultado)
 
 
 def busca_binaria(lista, alvo):
-    """Recebe uma lista JA ORDENADA. Devolve a posicao do alvo, ou -1."""
-    pass
+    def buscar_posicao(lista, alvo):
+    posicao = 0
+    for item in lista:
+        if item == alvo:
+            return posicao
+        posicao = posicao + 1
+    return -1
+
+numeros = [10, 20, 30, 40, 50]
+print(buscar_posicao(numeros, 30))
+print(buscar_posicao(numeros, 99))
 
 
 def intercala(lista_a, lista_b):
