@@ -62,6 +62,12 @@ l2 = [2, 4, 6]
 print(alternar_listas(l1, l2))
 
 def remove_repetidos(lista):
-    """(Desafio) Devolve uma lista nova sem repetidos,
-    mantendo a ordem da primeira aparicao."""
-    pass
+    def remover_repetidos(lista):
+    nova_lista = []
+    for item in lista:
+        if item not in nova_lista:
+            nova_lista.append(item)
+    return nova_lista
+
+numeros = [1, 2, 2, 3, 4, 1, 5, 3]
+print(remover_repetidos(numeros))
