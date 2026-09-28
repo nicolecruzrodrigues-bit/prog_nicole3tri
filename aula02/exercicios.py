@@ -47,10 +47,19 @@ print(buscar_posicao(numeros, 99))
 
 
 def intercala(lista_a, lista_b):
-    """Devolve uma lista nova alternando os elementos das duas.
-    As duas listas tem o mesmo tamanho."""
-    pass
+    
+    def alternar_listas(lista1, lista2):
+    nova_lista = []
+    i = 0
+    while i < len(lista1):
+        nova_lista.append(lista1[i])
+        nova_lista.append(lista2[i])
+        i = i + 1
+    return nova_lista
 
+l1 = [1, 3, 5]
+l2 = [2, 4, 6]
+print(alternar_listas(l1, l2))
 
 def remove_repetidos(lista):
     """(Desafio) Devolve uma lista nova sem repetidos,
