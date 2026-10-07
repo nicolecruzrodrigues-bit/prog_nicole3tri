@@ -12,16 +12,14 @@ def conta_negativos(lista):
     """Quantos numeros da lista sao menores que zero."""
    numeros = [10, -3, 5, -1, 0, -8, 7]
 
-
 quantidade_negativos = 0
-
 
 for numero in numeros:
     if numero < 0:
         
         quantidade_negativos = quantidade_negativos + 1
 
-print("A quantidade de números menores que zero é:", quantidade_negativos)
+print("numeros menores que zero é:", quantidade_negativos)
 
 
 
