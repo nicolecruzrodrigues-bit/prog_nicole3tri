@@ -160,7 +160,25 @@ print("Última posição do 99:", resultado2)
 
 def conta_ocorrencias(lista, alvo):
     """Quantas vezes o alvo aparece."""
-    pass
+    def contar_ocorrencias(lista, alvo):
+    contador = 0
+
+   
+    for item in lista:
+        
+            contador = contador + 1  
+
+    return contador
+
+
+
+numeros = [10, 20, 30, 20, 50, 20]
+
+resultado1 = contar_ocorrencias(numeros, 20)
+print("O número 20 aparece:", resultado1, "vezes")  
+
+resultado2 = contar_ocorrencias(numeros, 99)
+print("O número 99 aparece:", resultado2, "vezes") 
 
 
 def primeiro_maior_que(lista, limite):
