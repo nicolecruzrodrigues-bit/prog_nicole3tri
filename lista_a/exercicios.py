@@ -53,7 +53,34 @@ print("A média da lista vazia é:", resultado_vazio)
 
 def sem_o_maior(lista):
     """Lista NOVA sem o maior valor. Se o maior repete, tira so o primeiro."""
-    pass
+   def remover_primeiro_maior(lista):
+   
+    if len(lista) == 0:
+        return []
+
+    nova_lista = []
+    for item in lista:
+        nova_lista.append(item)
+
+    maior = nova_lista[0]
+    for numero in nova_lista:
+        if numero > maior:
+            maior = numero
+
+    nova_lista.remove(maior)
+
+    return nova_lista
+
+
+numeros = [10, 30, 20, 30, 5]
+resultado = remover_primeiro_maior(numeros)
+
+print("Lista original:", numeros)
+print("Nova lista:", resultado)
+
+
+outra_lista = [5, 1, 9, 2]
+print("Resultado 2:", remover_primeiro_maior(outra_lista))
 
 
 def acumulada(lista):
