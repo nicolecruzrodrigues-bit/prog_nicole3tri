@@ -205,8 +205,38 @@ print("Posição:", resultado2)
 def busca_binaria_primeira(lista, alvo):
     """(Desafio) Lista JA ORDENADA, o alvo pode repetir.
     Devolve a PRIMEIRA posicao do alvo, ou -1. Sem percorrer tudo."""
-    pass
+   def primeira_posicao(lista, alvo):
+    inicio = 0
+    fim = len(lista) - 1
+    posicao_encontrada = -1
 
+    while inicio <= fim:
+    
+        meio = (inicio + fim) // 2
+
+        if lista[meio] == alvo:
+            
+            posicao_encontrada = meio
+            
+            fim = meio - 1
+
+        elif lista[meio] < alvo:
+            
+            inicio = meio + 1
+            
+        else:
+            
+            fim = meio - 1
+
+    return posicao_encontrada
+
+
+numeros = [10, 20, 20, 20, 30, 40, 50]
+
+resultado1 = primeira_posicao(numeros, 20)
+print("Primeira posição do 20:", resultado1)  
+resultado2 
+print("Primeira posição do 99:", resultado2) 
 
 # ---------- Bloco 3: custo ----------
 
