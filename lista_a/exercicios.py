@@ -242,8 +242,24 @@ print("Primeira posição do 99:", resultado2)
 
 def soma_pares_contando(lista):
     """(soma_dos_pares, operacoes). Conte 1 por elemento examinado."""
-    pass
+   def somar_pares_e_contar_operacoes(lista):
+    soma_dos_pares = 0
+    operacoes = 0
 
+    for numero in lista:
+        
+        operacoes = operacoes + 1
+
+        
+        if numero % 2 == 0:
+            soma_dos_pares = soma_dos_pares + numero
+
+    return (soma_dos_pares, operacoes)
+
+numeros = [1, 2, 3, 4, 5, 6]
+resultado = somar_pares_e_contar_operacoes(numeros)
+
+print("Resultado (soma dos pares, operacoes):", resultado)
 
 def maior_contando(lista):
     """(maior, comparacoes). Lista nao vazia.
