@@ -135,7 +135,27 @@ print("Resultado 2:", achata(outros_dados))
 
 def busca_ultima(lista, alvo):
     """ULTIMA posicao do alvo, ou -1."""
-    pass
+   def ultima_posicao(lista, alvo):
+    posicao_encontrada = -1
+    
+    
+    for i in range(len(lista)):
+        
+        if lista[i] == alvo:
+            
+            posicao_encontrada = i
+            
+    return posicao_encontrada
+
+
+numeros = [10, 20, 30, 20, 50]
+
+
+resultado1 = ultima_posicao(numeros, 20)
+print("Última posição do 20:", resultado1)  
+
+resultado2 = ultima_posicao(numeros, 99)
+print("Última posição do 99:", resultado2)  
 
 
 def conta_ocorrencias(lista, alvo):
