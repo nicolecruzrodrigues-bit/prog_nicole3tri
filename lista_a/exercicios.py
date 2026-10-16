@@ -378,8 +378,31 @@ print(numeros)
 
 def eh_palindromo(lista):
     """True se a lista e igual lida de tras para frente."""
-    pass
+    def eh_palindromo(lista):
+    inicio = 0
+    fim = len(lista) - 1
 
+   
+    while inicio < fim:
+        
+        if lista[inicio] != lista[fim]:
+            return False
+        
+       
+        inicio = inicio + 1
+        fim = fim - 1
+
+    return True
+
+lista1 = [1, 2, 3, 2, 1]
+print(eh_palindromo(lista1)) 
+
+lista2 = [1, 2, 3, 4, 5]
+print(eh_palindromo(lista2))  
+
+
+lista3 = ["a", "r", "a", "r", "a"]
+print(eh_palindromo(lista3))  
 
 def par_que_soma(lista, alvo):
     """Lista JA ORDENADA. Devolve (i, j) das posicoes cujos valores somam alvo,
