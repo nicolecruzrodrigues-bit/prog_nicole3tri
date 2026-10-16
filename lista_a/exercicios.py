@@ -262,9 +262,28 @@ resultado = somar_pares_e_contar_operacoes(numeros)
 print("Resultado (soma dos pares, operacoes):", resultado)
 
 def maior_contando(lista):
-    """(maior, comparacoes). Lista nao vazia.
+    
+"""(maior, comparacoes). Lista nao vazia.
     Conte 1 comparacao por elemento a partir do segundo."""
-    pass
+    def maior_e_comparacoes(lista):
+    
+    maior = lista[0]
+    comparacoes = 0
+
+    for i in range(1, len(lista)):
+        
+        comparacoes = comparacoes + 1
+
+        
+        if lista[i] > maior:
+            maior = lista[i]
+
+    return (maior, comparacoes)
+
+numeros = [10, 50, 20, 80, 30]
+resultado = maior_e_comparacoes(numeros)
+
+print("Resultado (maior, comparacoes):", resultado)
 
 
 def tem_soma_contando(lista, alvo):
