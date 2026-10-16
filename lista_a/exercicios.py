@@ -289,7 +289,35 @@ print("Resultado (maior, comparacoes):", resultado)
 def tem_soma_contando(lista, alvo):
     """(True/False, comparacoes). Existem dois elementos que somam alvo?
     Conte 1 por par comparado. Pare assim que achar."""
-    pass
+   def tem_soma_alvo(lista, alvo):
+    comparacoes = 0
+    
+    
+    for i in range(len(lista)):
+    
+        for j in range(i + 1, len(lista)):
+            
+        
+            comparacoes = comparacoes + 1
+            
+           
+            if lista[i] + lista[j] == alvo:
+                
+                return (True, comparacoes)
+
+    return (False, comparacoes)
+
+numeros = [2, 7, 11, 15]
+
+resultado1 = tem_soma_alvo(numeros, 9)
+print("Resultado 1:", resultado1)
+
+resultado2 = tem_soma_alvo(numeros, 26)
+print("Resultado 2:", resultado2)
+
+resultado3 = tem_soma_alvo(numeros, 100)
+print("Resultado 3:", resultado3)
+
 
 
 def ordenada_contando(lista):
