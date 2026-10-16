@@ -323,7 +323,30 @@ print("Resultado 3:", resultado3)
 def ordenada_contando(lista):
     """(Desafio) (True/False, comparacoes). A lista esta em ordem crescente?
     Conte 1 por par de vizinhos comparado. Pare no primeiro fora de ordem."""
-    pass
+    def esta_ordenada(lista):
+    comparacoes = 0
+
+    for i in range(len(lista) - 1):
+        
+        comparacoes = comparacoes + 1
+
+        
+        if lista[i] > lista[i + 1]:
+            
+            return (False, comparacoes)
+
+   
+    return (True, comparacoes)
+
+lista1 = [10, 20, 30, 40]
+print("Exemplo 1:", esta_ordenada(lista1))
+
+lista2 = [50, 10, 20, 30]
+print("Exemplo 2:", esta_ordenada(lista2))
+
+lista3 = [10, 20, 40, 30]
+print("Exemplo 3:", esta_ordenada(lista3))
+
 
 
 # ---------- Bloco 4: padroes ----------
