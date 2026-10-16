@@ -183,8 +183,24 @@ print("O número 99 aparece:", resultado2, "vezes")
 
 def primeiro_maior_que(lista, limite):
     """Posicao do primeiro elemento maior que limite, ou -1."""
-    pass
+    def primeiro_maior(lista, limite):
+   
+    for i in range(len(lista)):
+       
+        if lista[i] > limite:
+            return i  
+            
 
+    return -1
+
+
+numeros = [10, 20, 50, 30, 80]
+
+resultado1 = primeiro_maior(numeros, 25)
+print("Posição:", resultado1)  
+
+resultado2 = primeiro_maior(numeros, 100)
+print("Posição:", resultado2)  
 
 def busca_binaria_primeira(lista, alvo):
     """(Desafio) Lista JA ORDENADA, o alvo pode repetir.
