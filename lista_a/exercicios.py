@@ -25,7 +25,30 @@ print("numeros menores que zero é:", quantidade_negativos)
 
 def media(lista):
     """Media dos numeros. Lista vazia devolve 0."""
-    pass
+    def media_dos_numeros(lista):
+    
+    if len(lista) == 0:
+        return 0
+
+    soma = 0
+
+    for numero in lista:
+        soma = soma + numero
+
+    quantidade = len(lista)
+
+    media = soma / quantidade
+
+    return media
+
+
+numeros = [10, 20, 30]
+resultado = media_dos_numeros(numeros)
+print("A média é:", resultado)  
+
+vazia = []
+resultado_vazio = media_dos_numeros(vazia)
+print("A média da lista vazia é:", resultado_vazio)  
 
 
 def sem_o_maior(lista):
