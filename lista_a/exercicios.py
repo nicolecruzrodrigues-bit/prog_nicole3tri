@@ -86,7 +86,26 @@ print("Resultado 2:", remover_primeiro_maior(outra_lista))
 def acumulada(lista):
     """Lista NOVA onde cada posicao e a soma de tudo ate ali.
     acumulada([1, 2, 3]) -> [1, 3, 6]"""
-    pass
+    def acumulada(lista):
+    nova_lista = []
+    soma_atual = 0
+
+    for numero in lista:
+        
+        soma_atual = soma_atual + numero
+
+        
+        nova_lista.append(soma_atual)
+
+    return nova_lista
+
+
+numeros = [1, 2, 3]
+resultado = acumulada(numeros)
+print("Resultado:", resultado)  
+
+outros_numeros = [2, 5, 10, 1]
+print("Resultado 2:", acumulada(outros_numeros))  
 
 
 def achata(lista_de_listas):
