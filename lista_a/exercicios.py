@@ -111,7 +111,24 @@ print("Resultado 2:", acumulada(outros_numeros))
 def achata(lista_de_listas):
     """(Desafio) Junta as sublistas numa lista so.
     achata([[1, 2], [3]]) -> [1, 2, 3]"""
-    pass
+    def achata(lista_de_listas):
+    nova_lista = []
+
+    for sublista in lista_de_listas:
+       
+        for elemento in sublista:
+            
+            nova_lista.append(elemento)
+
+    return nova_lista
+
+
+dados = [[1, 2], [3]]
+resultado = achata(dados)
+print("Resultado:", resultado)  
+
+outros_dados = [[10, 20], [30, 40, 50], [60]]
+print("Resultado 2:", achata(outros_dados))  
 
 
 # ---------- Bloco 2: busca ----------
