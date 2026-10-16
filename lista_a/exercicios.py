@@ -407,15 +407,62 @@ print(eh_palindromo(lista3))
 def par_que_soma(lista, alvo):
     """Lista JA ORDENADA. Devolve (i, j) das posicoes cujos valores somam alvo,
     ou (-1, -1). Sem laco dentro de laco."""
-    pass
+    def duas_somas_ordenado(lista, alvo):
+    i = 0
+    j = len(lista) - 1
+
+    while i < j:
+        soma = lista[i] + lista[j]
+
+        if soma == alvo:
+            return (i, j)
+        elif soma < alvo:
+            i = i + 1
+        else:
+            j = j - 1
+
+    return (-1, -1)
 
 
 def soma_maxima_janela(lista, k):
     """Maior soma de k elementos seguidos.
     soma_maxima_janela([1, 2, 3, 4], 2) -> 7"""
-    pass
+    def soma_maxima_janela(lista, k):
+    if len(lista) < k or k <= 0:
+        return 0
+
+    soma_atual = 0
+    for i in range(k):
+        soma_atual = soma_atual + lista[i]
+
+    soma_maxima = soma_atual
+
+    for i in range(k, len(lista)):
+        soma_atual = soma_atual + lista[i] - lista[i - k]
+        if soma_atual > soma_maxima:
+            soma_maxima = soma_atual
+
+    return soma_maxima
 
 
 def parenteses_balanceados(texto):
     """(Desafio) True se os ( ) e [ ] do texto abrem e fecham na ordem certa."""
-    pass
+   def parenteses_e_colchetes_validos(texto):
+    pilha = []
+
+    for caractere in texto:
+        if caractere == "(" or caractere == "[":
+            pilha.append(caractere)
+        elif caractere == ")":
+            if len(pilha) == 0 or pilha[-1] != "(":
+                return False
+            pilha.pop()
+        elif caractere == "]":
+            if len(pilha) == 0 or pilha[-1] != "[":
+                return False
+            pilha.pop()
+
+    if len(pilha) == 0:
+        return True
+    else:
+        return False
