@@ -353,8 +353,28 @@ print("Exemplo 3:", esta_ordenada(lista3))
 
 def inverte_no_lugar(lista):
     """Inverte a PROPRIA lista recebida. NAO cria lista nova e NAO devolve nada."""
-    pass
+    def inverter_lista(lista):
+    inicio = 0
+    fim = len(lista) - 1
 
+    while inicio < fim:
+        
+        temp = lista[inicio]
+        lista[inicio] = lista[fim]
+        lista[fim] = temp
+
+       
+        inicio = inicio + 1
+        fim = fim - 1
+
+
+numeros = [1, 2, 3, 4, 5]
+
+
+inverter_lista(numeros)
+
+
+print(numeros)  
 
 def eh_palindromo(lista):
     """True se a lista e igual lida de tras para frente."""
