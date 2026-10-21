@@ -8,8 +8,6 @@ Os exercicios do Bloco 3 devolvem DOIS valores: o resultado e a contagem.
 
 # ---------- Bloco 1: listas e percurso ----------
 
-# ---------- Bloco 1: Operações Básicas ----------
-
 def conta_negativos(lista):
     """Quantos numeros da lista sao menores que zero."""
     quantidade_negativos = 0
